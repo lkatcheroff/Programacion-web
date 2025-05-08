@@ -6,6 +6,40 @@
     <title>Nueva reserva SGC</title>
 </head>
 <body>
-    
+    <h2>Hacer una nueva reserva</h2>
+<form id="form-reserva">
+    <label for="dia">Día de la reserva:</label>
+    <input type="date" id="dia" required><br><br>
+
+    <label for="turno">Turno (hora):</label>
+    <select name="turno" id="turno" required>
+        <!-- Turnos desde 9 hasta 21 -->
+        <option value="9">9:00</option>
+        <option value="10">10:00</option>
+        <option value="11">11:00</option>
+        <option value="12">12:00</option>
+        <option value="13">13:00</option>
+        <option value="14">14:00</option>
+        <option value="15">15:00</option>
+        <option value="16">16:00</option>
+        <option value="17">17:00</option>
+        <option value="18">18:00</option>
+        <option value="19">19:00</option>
+        <option value="20">20:00</option>
+        <option value="21">21:00</option>
+    </select><br><br>
+
+    <label for="nombre">Nombre de quien reserva:</label>
+    <input type="text" id="nombre" required><br><br>
+
+    <button type="submit">Reservar</button>
+</form>
+
+
+
+<!-- Mostrar resultado -->
+<div id="resultado"></div>
+
 </body>
+<script src="gestionReservas.js"></script>
 </html>
