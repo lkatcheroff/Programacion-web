@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modificar reserva</title>
+</head>
+<body>
+    <h2>Modificar una reserva existente</h2>
+    <form id="form-modificar">
+        <input type="text" id="codigo-busqueda" placeholder="Código de reserva" required>
+        <button type="button" id="boton-modificar">Buscar reserva</button>
+    </form>
+    
+    <div id="form-edicion" style="display:none;">
+        <h3>Editar Reserva</h3>
+        <form id="form-editar-reserva">
+            <input type="date" id="edit-dia" required><br><br>
+    
+            <select id="edit-turno" required>
+                <option value="9">9:00</option>
+                <option value="10">10:00</option>
+                <option value="11">11:00</option>
+                <option value="12">12:00</option>
+                <option value="13">13:00</option>
+                <option value="14">14:00</option>
+                <option value="15">15:00</option>
+                <option value="16">16:00</option>
+                <option value="17">17:00</option>
+                <option value="18">18:00</option>
+                <option value="19">19:00</option>
+                <option value="20">20:00</option>
+                <option value="21">21:00</option>
+            </select><br><br>
+    
+            <input type="text" id="edit-nombre" placeholder="Nuevo nombre" required><br><br>
+    
+            <button type="button" id="boton-editar-reserva">Guardar cambios</button>
+        </form>
+    </div>
+    
+    
+</body>
+<script src="modificarReservas.js"></script>
+</html>
