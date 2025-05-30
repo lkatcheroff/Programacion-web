@@ -1,80 +1,71 @@
-#barra {
-	background-color: #f0f0f0;
-    position: sticky;
-    top: 0;
-    z-index: 1000; /* Ensures it stays above other elements */
-    width: 100%; /* Ensures it spans the full width of the page */
-}
-
-.grid-secciones {
-    display: grid;
-    gap: 20px;
+h1 {
+    font-size: 2.5rem;
+    color: #565857;
+    text-align: center;
     margin-top: 20px;
 }
 
-@media screen and (max-width: 600px) {
-    .grid-secciones {
-        grid-template-columns: 1fr;
-    }
+h2 {
+    font-size: 1.5rem;
+    color: #565857;
+    text-align: center;
+    margin-top: 15px;
+}
+h3 {
+    font-size: 1.2rem;
+    color: #565857;
+    text-align: center;
 }
 
-@media screen and (min-width: 601px) {
-    .grid-secciones {
-        grid-template-columns: repeat(2, 1fr);
-    }
+#subtitulo {
+    font-size: 0.8rem;
+    color: #565857;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.miNavbar {
+    background-color: #6874E8;
+    padding: 10px;
+    border-radius: 5px;
 }
 
 .seccion {
     padding: 15px;
     border: 1px solid #ddd;
     border-radius: 10px;
-    background-color: #f9f9f9;
+    background-color: #F9F9F9;
 }
 
-
-.imagen-ancha {
-    width: 100%;
-    height: auto;
-    display: block;
-    margin: 20px 0;
-}
-
-/* Navbar */
-#barra {
-    background-color: #333;
-    padding: 10px 20px;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
-
-#barra ul {
-    list-style: none;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0;
-    padding: 0;
-}
-
-#barra li {
-    margin: 0 10px;
-}
-
-#barra a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    padding: 8px 12px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-
-#barra a:hover {
-    background-color: #555;
-}
 
 .logo-img {
     height: 40px;
     width: auto;
 }
+
+#footer {
+  text-align: center;       
+  padding: 1rem;            
+  background-color: #6BA739; 
+  margin-top: 1.5rem;       
+}
+#footer p {
+  color: #F9F9F9;           
+  font-size: 1rem;        
+}
+
+.boton {
+    background-color: #E09F3E;
+    color: #F9F9F9;
+}
+
+
+/* Colores del proyecto:
+
+F9F9F9: grisecito
+6BA739: verde claro
+565857: gris oscuro
+E09F3E: naranjita
+6874E8: azul claro
+
+*/

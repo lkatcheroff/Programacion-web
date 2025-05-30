@@ -3,7 +3,8 @@ let reservas = JSON.parse(localStorage.getItem("reservas")) || [];
 let codigoActual = "";
 let infoDiv = document.getElementById("info-reserva");
 
-document.getElementById("boton-eliminar").addEventListener("click", function () {
+document.getElementById("form-eliminar").addEventListener("submit", function (e) {
+    e.preventDefault(); 
     const codigo = document.getElementById("codigo-eliminar").value.trim();
     const reserva = reservas.find(r => r.codigo === codigo);
 

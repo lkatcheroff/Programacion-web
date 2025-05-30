@@ -21,7 +21,7 @@ function buscarReserva(dia, turno) {
 }
 
 document.getElementById('form-reserva').addEventListener('submit', function (e) {
-    e.preventDefault(); //aca hay dudas, esto dijo gpt
+    e.preventDefault(); 
 
     // Obtener datos del formulario
     const dia = document.getElementById('dia').value;
@@ -58,3 +58,6 @@ document.getElementById('form-reserva').addEventListener('submit', function (e) 
     this.reset();
 });
 
+document.getElementById("volver").addEventListener("click", function () {
+    window.location.href = "reservas.html";
+})
