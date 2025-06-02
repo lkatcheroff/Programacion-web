@@ -12,7 +12,6 @@ function buscarReserva(dia, turno) {
     return false;
 }
 
-// Buscar la reserva por código
 document.getElementById('boton-modificar').addEventListener('click', function () {
     const codigo = document.getElementById('codigo-busqueda').value;
     const reserva = reservas.find(r => r.codigo === codigo);

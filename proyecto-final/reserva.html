@@ -15,7 +15,7 @@
 <header>
         <nav class="navbar navbar-expand-lg miNavbar" data-bs-theme="dark">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#"><img src="./logo.png" alt="SGC Logo" class="logo-img"></a>
+                <a class="navbar-brand" href="./index.html"><img src="./logo.png" alt="SGC Logo" class="logo-img"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -41,17 +41,18 @@
     </header>
     
     <h1>Hacer una nueva reserva</h1>
-<form id="form-reserva">
-
+    
+<div class="container my-5">  
+  <form id="form-reserva">
     <div class="mb-3">
-        <label for="dia" class="form-label">Día de la reserva:</label>
-        <input type="date" class="form-control" id="dia" required aria-describedby="descripcionDia">
+      <label for="dia" class="form-label">Día de la reserva:</label>
+      <input type="date" class="form-control" id="dia" required>
     </div>
 
-    <label class="form-label">Turno (hora):</label>
-    <select class="form-select" aria-label="Turno (hora):" name="turno" id="turno" required>
-    
-        <!-- Turnos desde 9 hasta 21 -->
+    <div class="mb-3">
+      <label for="turno" class="form-label">Turno (hora):</label>
+      <select class="form-select" id="turno" required>
+        <option disabled selected value="">Seleccione una hora</option>
         <option value="9">9:00</option>
         <option value="10">10:00</option>
         <option value="11">11:00</option>
@@ -65,19 +66,27 @@
         <option value="19">19:00</option>
         <option value="20">20:00</option>
         <option value="21">21:00</option>
-    </select><br>
+      </select>
+    </div>
 
-
+    <!-- Nombre -->
     <div class="mb-3">
-    <label for="nombre" class="form-label">Nombre de quien reserva:</label>
-    <input type="text" class="form-control" id="nombre" aria-describedby="ayudaNombre" required>
-    <div id="ayudaNombre" class="form-text">Si el pedido de su reserva está ocupado, se lo haremos saber</div>
-  </div>
-  <br>
+      <label for="nombre" class="form-label">Nombre de quien reserva:</label>
+      <input type="text" class="form-control" id="nombre" required>
+      <div class="form-text">Si el turno elegido está ocupado, se lo haremos saber.</div>
+    </div>
 
-    <button type="submit" class="col-12 boton">Reservar</button><br><br>
-    <button type="button" class="col-12 btn btn-danger" id="volver">Volver</button>
-</form>
+    <!-- Botones -->
+    <div class="d-flex justify-content-center">
+        <button type="submit" class="col-6 btn btn-outline-warning boton">Reservar</button>
+    </div>
+    <br>
+    <div class="d-flex justify-content-center">
+        <button type="button" class="col-6 btn btn-danger" id="volver">Volver</button>
+    </div>
+  </form>
+</div>
+
 
 
 
