@@ -1,6 +1,5 @@
 const reservas = JSON.parse(localStorage.getItem("reservas")) || [];
 
-// Modificar reserva
 let reservaAEditar = null;
 
 function buscarReserva(dia, turno) {
@@ -17,7 +16,6 @@ document.getElementById('boton-modificar').addEventListener('click', function ()
     const reserva = reservas.find(r => r.codigo === codigo);
 
     if (reserva) {
-        // Mostrar el formulario de edición
         reservaAEditar = reserva;
         document.getElementById('form-edicion').style.display = 'block';
         document.getElementById('edit-dia').value = reserva.dia;
@@ -29,7 +27,6 @@ document.getElementById('boton-modificar').addEventListener('click', function ()
     }
 });
 
-// Guardar los cambios
 document.getElementById('boton-editar-reserva').addEventListener('click', function () {
     if (reservaAEditar) {
         const dia = document.getElementById('edit-dia').value;
@@ -40,7 +37,6 @@ document.getElementById('boton-editar-reserva').addEventListener('click', functi
             return;
         }
         else {
-            // Actualizar la reserva en el array
             const index = reservas.findIndex(r => r.codigo === reservaAEditar.codigo);
             reservas[index] = {dia, turno, nombre, codigo: reservaAEditar.codigo};};
             localStorage.setItem("reservas", JSON.stringify(reservas));
@@ -52,3 +48,6 @@ document.getElementById('boton-editar-reserva').addEventListener('click', functi
     }
 );
 
+document.getElementById("volver").addEventListener("click", function () {
+    window.location.href = "reservas.html";
+})

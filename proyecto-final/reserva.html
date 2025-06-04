@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,8 +12,9 @@
         crossorigin="anonymous"></script>
     <link rel="stylesheet" href="estilos.css">
 </head>
+
 <body>
-<header>
+    <header>
         <nav class="navbar navbar-expand-lg miNavbar" data-bs-theme="dark">
             <div class="container-fluid">
                 <a class="navbar-brand" href="./index.html"><img src="./logo.png" alt="SGC Logo" class="logo-img"></a>
@@ -23,10 +25,10 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="./index.html">Inicio</a>
+                            <a class="nav-link" aria-current="page" href="./index.html">Inicio</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="./reservas.html">Reservas</a>
+                            <a class="nav-link active" href="./reservas.html">Reservas</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="./contacto.html">Contacto</a>
@@ -39,63 +41,58 @@
             </div>
         </nav>
     </header>
-    
+
     <h1>Hacer una nueva reserva</h1>
-    
-<div class="container my-5">  
-  <form id="form-reserva">
-    <div class="mb-3">
-      <label for="dia" class="form-label">Día de la reserva:</label>
-      <input type="date" class="form-control" id="dia" required>
+
+    <div class="container my-5">
+        <form id="form-reserva">
+            <div class="mb-3">
+                <label for="dia" class="form-label">Día de la reserva:</label>
+                <input type="date" class="form-control" id="dia" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="turno" class="form-label">Turno (hora):</label>
+                <select class="form-select" id="turno" required>
+                    <option disabled selected value="">Seleccione una hora</option>
+                    <option value="9">9:00</option>
+                    <option value="10">10:00</option>
+                    <option value="11">11:00</option>
+                    <option value="12">12:00</option>
+                    <option value="13">13:00</option>
+                    <option value="14">14:00</option>
+                    <option value="15">15:00</option>
+                    <option value="16">16:00</option>
+                    <option value="17">17:00</option>
+                    <option value="18">18:00</option>
+                    <option value="19">19:00</option>
+                    <option value="20">20:00</option>
+                    <option value="21">21:00</option>
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label for="nombre" class="form-label">Nombre de quien reserva:</label>
+                <input type="text" class="form-control" id="nombre" required>
+                <div class="form-text">Si el turno elegido está ocupado, se lo haremos saber.</div>
+            </div>
+            <div class="d-flex justify-content-center">
+                <button type="submit" class="col-6 btn btn-outline-warning boton">Reservar</button>
+            </div>
+            <br>
+            <div class="d-flex justify-content-center">
+                <button type="button" class="col-6 btn btn-danger" id="volver">Volver</button>
+            </div>
+        </form>
     </div>
 
-    <div class="mb-3">
-      <label for="turno" class="form-label">Turno (hora):</label>
-      <select class="form-select" id="turno" required>
-        <option disabled selected value="">Seleccione una hora</option>
-        <option value="9">9:00</option>
-        <option value="10">10:00</option>
-        <option value="11">11:00</option>
-        <option value="12">12:00</option>
-        <option value="13">13:00</option>
-        <option value="14">14:00</option>
-        <option value="15">15:00</option>
-        <option value="16">16:00</option>
-        <option value="17">17:00</option>
-        <option value="18">18:00</option>
-        <option value="19">19:00</option>
-        <option value="20">20:00</option>
-        <option value="21">21:00</option>
-      </select>
-    </div>
 
-    <!-- Nombre -->
-    <div class="mb-3">
-      <label for="nombre" class="form-label">Nombre de quien reserva:</label>
-      <input type="text" class="form-control" id="nombre" required>
-      <div class="form-text">Si el turno elegido está ocupado, se lo haremos saber.</div>
-    </div>
-
-    <!-- Botones -->
-    <div class="d-flex justify-content-center">
-        <button type="submit" class="col-6 btn btn-outline-warning boton">Reservar</button>
-    </div>
-    <br>
-    <div class="d-flex justify-content-center">
-        <button type="button" class="col-6 btn btn-danger" id="volver">Volver</button>
-    </div>
-  </form>
-</div>
-
-
-
-
-<!-- Mostrar resultado -->
-<div id="resultado"></div>
-
+    <div id="resultado"></div>
+    <footer id="footer">
+        <p>&copy; 2025 SGC Canchas. Todos los derechos reservados.</p>
+    </footer>
 </body>
-<footer id="footer">
-  <p>&copy; 2025 SGC Canchas. Todos los derechos reservados.</p>
-</footer>
+
 <script src="gestionReservas.js"></script>
+
 </html>
