@@ -15,7 +15,16 @@ document.addEventListener("DOMContentLoaded", function () {
         contenedor.innerHTML = `<p class="text-center">No hay consultas registradas.</p>`;
         return;
     }
+    mostrarConsultas(consultas, contenedor);
+    
+});
 
+document.getElementById("boton-vuelta").addEventListener("click", function () {
+    window.location.href = "index.html";
+});
+
+
+function mostrarConsultas(consultas, contenedor) {
     for (let i = 0; i < consultas.length; i++) {
         const consulta = consultas[i];
         const item = document.createElement("div");
@@ -45,8 +54,4 @@ document.addEventListener("DOMContentLoaded", function () {
         item.appendChild(ul);
         contenedor.appendChild(item);
     }
-});
-
-document.getElementById("boton-vuelta").addEventListener("click", function () {
-    window.location.href = "index.html";
-});
+}
