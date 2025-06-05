@@ -31,6 +31,13 @@ document.getElementById('form-reserva').addEventListener('submit', function (e) 
             `;
         return;
     }
+    const diaConFormato = new Date(dia);
+    if (diaConFormato < Date.now()) {
+        document.getElementById('resultado').innerHTML = `
+                <p>Por favor, ingrese una fecha válida y posterior a hoy.</p>
+            `;
+        return;
+    }
     const nuevaReserva = {
         dia: dia,
         turno: turno,

@@ -36,16 +36,22 @@ document.getElementById('boton-editar-reserva').addEventListener('click', functi
             alert("El turno ya está reservado. Por favor, elija otro.");
             return;
         }
+        const diaConFormato = new Date(dia);
+        if (diaConFormato < Date.now()) {
+            alert("Por favor, ingrese una fecha válida y posterior a hoy.")
+            return;
+        }
         else {
             const index = reservas.findIndex(r => r.codigo === reservaAEditar.codigo);
-            reservas[index] = {dia, turno, nombre, codigo: reservaAEditar.codigo};};
-            localStorage.setItem("reservas", JSON.stringify(reservas));
+            reservas[index] = { dia, turno, nombre, codigo: reservaAEditar.codigo };
+        };
+        localStorage.setItem("reservas", JSON.stringify(reservas));
 
-            alert("Reserva modificada con éxito.");
-            document.getElementById('form-edicion').style.display = 'none';
-            reservaAEditar = null;
-        }
+        alert("Reserva modificada con éxito.");
+        document.getElementById('form-edicion').style.display = 'none';
+        reservaAEditar = null;
     }
+}
 );
 
 document.getElementById("volver").addEventListener("click", function () {
